@@ -25,61 +25,83 @@
       <p>The voice conversion (VC) task usually contains two key parts, which are the content encoder and the speaker encoder. Waveform reconstruction is usually performed during training phase. However, the mismatch between training and inference hinders the performance of those VC systems. To alleviate the mismatch problem, we propose a new VC training method named \textit{PseudoVC} in this paper. Firstly, we utilizes VC models to generate pseudo examples, which will be fed into the content encoder during training. This new information perturbation approach is named as \textit{pseudo examples}. Secondly, we will substitute the input to speaker model by another utterance which shares the same speaker during training, which is denoted as \textit{speaker sample}. Experimental results show that our \textit{pseudo examples} is superior to previous  information perturbation approaches and the overall \textit{PseudoVC} method outperforms publicly available VC models. Audio examples are available \footnote{https://songjuncao.github.io/} and our model will release.</p>
       
 
-      <h2 id="speech-based-emotion-control">Emotion Control Based On Speech Prompt</h2>
+      <h2 id="speech-based-emotion-control">Comparison with public voice conversion models</h2>
       <h4 id="note">( Note that: in the 'Ours w/o MPEE', we replaced the proposed MPEE  with the AMPE of MM-TTS ) </h4>
       <table>
         <thead>
           <tr>
-            <th><center> Speech Prompt </center></th>
-            <th><center> Text </center></th>
-            <th><center> GenerSpeech </center></th>
-            <th><center> Meta-StyleSpeech </center></th>
-            <th><center> MM-TTS </center></th>
-            <th><center> Ours w/o MPEE </center></th>
-            <th><center> Ours w/o ECL </center></th>
-            <th><center> Ours </center></th>
+            <th><center> Source </center></th>
+            <th><center> Target </center></th>
+            <th><center> Phoneme Hallucinator </center></th>
+            <th><center> DDDM-VC </center></th>
+            <th><center> FreeVC </center></th>
+            <th><center> PseudoVC(ours) </center></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><audio src="samples/speech-based/0/Ref.wav" controls="" preload=""></audio></td>
-            <td>don't ask me to carry an oily rag like that.</td>
-            <td><audio src="samples/speech-based/0/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/0/Ours.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example252/4.wav" controls="" preload=""></audio></td>
           </tr>
           <tr>
-            <td><audio src="samples/speech-based/1/Ref.wav" controls="" preload=""></audio></td>
-            <td>she had your dark suit in greasy wash water all year.</td>
-            <td><audio src="samples/speech-based/1/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/1/Ours.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example108/4.wav" controls="" preload=""></audio></td>
           </tr>
           <tr>
-            <td><audio src="samples/speech-based/2/Ref.wav" controls="" preload=""></audio></td>
-            <td>he ate four extra eggs for breakfast.</td>
-            <td><audio src="samples/speech-based/2/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/2/Ours.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example123/4.wav" controls="" preload=""></audio></td>
           </tr>
           <tr>
-            <td><audio src="samples/speech-based/3/Ref.wav" controls="" preload=""></audio></td>
-            <td>he ate four extra eggs for breakfast.</td>
-            <td><audio src="samples/speech-based/3/Meta.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Gener.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/MMTTS.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_MPEE.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours_wo_ECL.wav" controls="" preload=""></audio></td>
-            <td><audio src="samples/speech-based/3/Ours.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example140/4.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><audio src="samples/overall/example162/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example162/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example162/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example162/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example162/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example162/4.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><audio src="samples/overall/example240/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example240/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example240/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example240/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example240/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example240/4.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><audio src="samples/overall/example166/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example166/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example166/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example166/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example166/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example166/4.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td><audio src="samples/overall/example154/src.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example154/ref.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example154/1.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example154/2.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example154/3.wav" controls="" preload=""></audio></td>
+            <td><audio src="samples/overall/example154/4.wav" controls="" preload=""></audio></td>
           </tr>
         </tbody>
       </table>
